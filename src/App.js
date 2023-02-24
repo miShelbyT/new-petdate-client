@@ -1,23 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
+import { useEffect, useState } from "react";
+import PetList from "./components/PetList";
+import SideBar from "./components/SideBar";
+import Footer from "./components/Footer";
 
 function App() {
+
+  const [pets, setPets] = useState([])
+  const [user, setUser] = useState(null)
+
+  const currentUser = 4
+
+  const getUser = async () => {
+    const resp = await fetch(`http://localhost:9292/users/${currentUser}`)
+    const userData = await resp.json()
+    setUser(userData)
+  }
+
+  const getPets = async () => {
+    const resp = await fetch("http://localhost:9292/pets")
+    const petData = await resp.json()
+    setPets(petData)
+  }
+
+  useEffect(() => {
+    getPets()
+    getUser()
+  },[])
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <SideBar />
+      <PetList pets={pets}/>
+      <Footer />
     </div>
   );
 }
