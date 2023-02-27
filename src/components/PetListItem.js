@@ -1,19 +1,31 @@
-import React from "react";
+import styled from "styled-components";
+import { PetImg, PetInfo } from "../styled/components";
+import { Link } from "react-router-dom";
 
-function PetListItem({ breed, name, species, image_url, age }) {
+
+const PetCard = styled(Link)`
+  border: 1px solid grey;
+  padding: 16px;
+  display: flex;
+  text-decoration: none;
+`;
+
+
+
+function PetListItem({ breed, name, species, image_url, age, id }) {
   return (
-    <div className="pet-card">
-      <div className="pet-info">
+    <PetCard to={`/pets/${id}`}>
+      <PetInfo>
         <h2>{name}</h2>
         <h3>
           {species}: {breed}
         </h3>
         <h3>Age: {age}</h3>
-      </div>
+      </PetInfo>
       <div>
-        <img src={image_url} alt="pet"></img>
+        <PetImg src={image_url} alt="pet"></PetImg>
       </div>
-    </div>
+    </PetCard>
   );
 }
 
