@@ -1,16 +1,25 @@
-- All pets @ home should be tiles, use display grid for just images (expand image on hover). Can still click thru to each pet's details page.
+- petplusdates
+  Fix pet image
 
-- Fill out Pet Details page => also need functionality to add new friend to existing playdate
+- petlistitem
+  cards should zoom/expand on hover
 
-- Should only be able to add meetup to MY pet (and invite another pet)
+- petdateitem 
+  sort playdates by date
+  collapse/hide previous petdates with ability to view them
+  add new friend to existing playdate
+  edit or delete upcoming petdate
 
-- Check out Canva for logo - should click logo to take user home
-(can logo be wagging dog tail?)
+- Should only be able to add meetup to MY pet (and invite another pet to MY pet's playdates)
 
-- Animated Landing page? Animista?
+- Sign in (add pets to owner on signup) / Log in / Log Out
 
-- New pet form
-
-- Sign in / Log in / Log Out
+- add pet to existing owner
 
 - Update/Delete Pet and Owner
+
+- for now, login: fetch currentOwner as User.first
+
+- Check out Canva for logo - (can logo be wagging dog tail, maybe wag on hover?)
+
+- Animated Landing page? Animista?

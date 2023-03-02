@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Shantell+Sans:ital,wght@1,300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Shantell+Sans:ital,wght@1,300&display=swap");
 
 :root {
   --deep-purple: rgb(67, 61, 83);
@@ -6,6 +6,16 @@
 
 body {
   margin: 0;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
+button {
+  cursor: pointer;
+}
+
+.petdate {
+  border: 1px solid grey;
+  border-radius: 5px;
+  padding: 16px;
+  margin: 14px;
+}

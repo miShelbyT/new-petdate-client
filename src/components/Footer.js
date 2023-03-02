@@ -20,7 +20,7 @@ const FootContainer = styled.div`
 function Footer() {
   return (
     <FootContainer>
-      <h4 id="footer-text">🐶 PetDates ~ For Your Best Pet Friends 2023 🐈</h4>
+      <h4>🐶 PetDates ~ For Your Best Pet Friends 2023 🐈</h4>
     </FootContainer>
   );
 }
